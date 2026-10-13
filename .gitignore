@@ -1,0 +1,21 @@
+# Environment Variables & Secrets
+.env
+.env.local
+config.local.php
+
+# IDE & Editor Configurations
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating System Files
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
+
+# Logs & Cache
+*.log
+error_log
