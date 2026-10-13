@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  web:
+    image: php:8.1-apache
+    container_name: lioncinema_web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    environment:
+      - DB_HOST=db
+      - DB_NAME=lion_cinema_db
+      - DB_USER=lion_user
+      - DB_PASSWORD=lion_secret
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: lioncinema_db
+    restart: unless-stopped
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root_secret
+      MYSQL_DATABASE: lion_cinema_db
+      MYSQL_USER: lion_user
+      MYSQL_PASSWORD: lion_secret
+    volumes:
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/init.sql
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
