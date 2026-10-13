@@ -54,11 +54,11 @@ if (isset($_POST["cart"]) && $_POST["cart"] === "true") {
     $delivery = ($qty > 5) ? 0 : $district_data["delivery_cost"];
 }
 
-$merchantId = "1225034";
-$merchantSecret = "MTUyOTk3MTU3MjE5NzI0NzQwNjIyNjUyNzIwNTQxNTE2ODEzMDY4";
+$merchantId = getenv('PAYHERE_MERCHANT_ID') ?: "1225034";
+$merchantSecret = getenv('PAYHERE_MERCHANT_SECRET') ?: "sandbox_merchant_secret_placeholder";
 $items = "";
 $netTotal = 0;
-$currency = "LKR";
+$currency = getenv('PAYHERE_CURRENCY') ?: "LKR";
 $orderId = uniqid();
 
 for ($i = 0; $i < sizeof($productList); $i++) {

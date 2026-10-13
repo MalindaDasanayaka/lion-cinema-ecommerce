@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 -- Dumping data for table lion_cinema_db.admin: ~4 rows (approximately)
 INSERT INTO `admin` (`fname`, `lname`, `email`, `password`, `mobile`, `registered_date`, `vcode`, `status_status_id`) VALUES
 	('Ishan', 'Tharuka', 'ishan@gmail.com', 'ishan123', '0778123533', '2024-05-30 09:52:12', NULL, 1),
-	('Malinda', 'Dasanayaka', 'malindadasanayaka@gmail.com', 'Malinda123@', '0778172488', '2024-05-25 13:15:34', '666162b6ac87c', 1),
+	('Malinda', 'Dasanayaka', 'malindadasanayaka@gmail.com', 'LionCinema@2026', '0771234567', '2024-05-25 13:15:34', '666162b6ac87c', 1),
 	('Sahan', 'Perera', 'sahan@gmail.com', 'sahan123', '0778185778', '2024-05-25 13:27:36', NULL, 2),
 	('Dilan', 'Ravindu', 'tytydilan8@gmail.com', 'Dilan1234', '0778185779', '2024-05-25 13:21:12', '6651e78246bbb', 1);
 
@@ -570,7 +570,7 @@ INSERT INTO `user` (`fname`, `lname`, `email`, `password`, `mobile`, `joined_dat
 	('Nimsara', 'Yuwanga', 'nimsara@gmail.com', 'nimsara1234', '0765419824', '2024-05-30 09:36:05', NULL, 1, 1),
 	('Pasan', 'Piyumika', 'pasan@gmail.com', 'pasan123', '0789255624', '2024-06-01 18:00:56', NULL, 1, 1),
 	('Ravindu', 'Dilshan', 'ravid@2345gmail.com', 'fdyutyu477', '0778172481', '2024-05-25 10:24:58', NULL, 1, 1),
-	('Malinda', 'Dasanayaka', 'malindadasanayaka@gmail.com', 'Malinda123@', '0778172488', '2024-05-25 10:21:04', '6661612abf653', 1, 1),
+	('Malinda', 'Dasanayaka', 'malindadasanayaka@gmail.com', 'LionCinema@2026', '0771234567', '2024-05-25 10:21:04', '6661612abf653', 1, 1),
 	('Sahan', 'Gunasekara', 'sahan@gmail.com', 'sahan123', '0778822564', '2024-05-30 09:31:22', NULL, 1, 1),
 	('Savindu', 'Dilan', 'savindudilan126@gmail.com', '111111111', '0777181999', '2024-05-25 10:27:26', NULL, 1, 1),
 	('Ravindu', 'Dilan', 'tytydilan8@gmail.com', 'Ravid@2357', '0778176455', '2024-05-25 10:22:59', NULL, 1, 1),

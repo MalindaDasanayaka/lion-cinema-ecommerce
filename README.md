@@ -191,8 +191,8 @@ docker compose up -d
 
 | Role | Email | Password | Access Scope |
 | :--- | :--- | :--- | :--- |
-| **Customer** | `malindadasanayaka@gmail.com` | `Malinda123@` | Storefront browsing, Cart, Checkout, Profile |
-| **Admin** | `malindadasanayaka@gmail.com` | `Malinda123@` | Operations dashboard, Catalog, Order statuses |
+| **Customer** | `malindadasanayaka@gmail.com` | `LionCinema@2026` | Storefront browsing, Cart, Checkout, Profile |
+| **Admin** | `malindadasanayaka@gmail.com` | `LionCinema@2026` | Operations dashboard, Catalog, Order statuses |
 | **Super Admin**| `malindadasanayaka@gmail.com` | *(2FA via DB `vcode`)* | Admin staff management, System settings |
 
 ---

@@ -22,16 +22,19 @@ if(isset($_POST["e"]) && isset($_POST["p"])){
 
         Database::iud("UPDATE `admin` SET `vcode`='".$code."' WHERE `email`='".$email."'");
 
+        $smtpUser = getenv('SMTP_USERNAME') ?: 'demo.mailer@lioncinema.com';
+        $smtpPass = getenv('SMTP_PASSWORD') ?: '';
+
         $mail = new PHPMailer;
         $mail->IsSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'tytydilan8@gmail.com';
-        $mail->Password = 'kqtbblcdzmzwkyqn';
-        $mail->SMTPSecure = 'ssl';
-        $mail->Port = 465;
-        $mail->setFrom('tytydilan8@gmail.com', 'Admin Verification');
-        $mail->addReplyTo('tytydilan8@gmail.com', 'Admin Verification');
+        $mail->Username = $smtpUser;
+        $mail->Password = $smtpPass;
+        $mail->SMTPSecure = getenv('SMTP_SECURE') ?: 'ssl';
+        $mail->Port = intval(getenv('SMTP_PORT') ?: 465);
+        $mail->setFrom($smtpUser, 'Admin Verification');
+        $mail->addReplyTo($smtpUser, 'Admin Verification');
         $mail->addAddress($email);
         $mail->isHTML(true);
         $mail->Subject = 'Lion Cinema Admin Login Verification Code';

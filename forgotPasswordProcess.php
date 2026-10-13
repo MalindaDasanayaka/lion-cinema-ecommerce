@@ -18,16 +18,19 @@ if(isset($_GET["e"])){
         $code = uniqid();
         Database::iud("UPDATE `user` SET `verification_code`='".$code."' WHERE `email`='".$email."'");
 
+        $smtpUser = getenv('SMTP_USERNAME') ?: 'demo.mailer@lioncinema.com';
+        $smtpPass = getenv('SMTP_PASSWORD') ?: '';
+
         $mail = new PHPMailer;
         $mail->IsSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'tytydilan8@gmail.com';
-        $mail->Password = 'kqtbblcdzmzwkyqn';
-        $mail->SMTPSecure = 'ssl';
-        $mail->Port = 465;
-        $mail->setFrom('tytydilan8@gmail.com', 'Reset Password');
-        $mail->addReplyTo('tytydilan8@gmail.com', 'Reset Password');
+        $mail->Username = $smtpUser;
+        $mail->Password = $smtpPass;
+        $mail->SMTPSecure = getenv('SMTP_SECURE') ?: 'ssl';
+        $mail->Port = intval(getenv('SMTP_PORT') ?: 465);
+        $mail->setFrom($smtpUser, 'Reset Password');
+        $mail->addReplyTo($smtpUser, 'Reset Password');
         $mail->addAddress($email);
         $mail->isHTML(true);
         $mail->Subject = 'Lion Cinema Forgot password Verification Code';
