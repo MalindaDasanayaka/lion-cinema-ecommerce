@@ -1,0 +1,205 @@
+.main-body{
+    background-image: url("resource/background-body.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo1{
+    background-image: url("resource/logos/logo1.png");
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo2{
+    background-image: url("resource/logos/logo2.png");
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("font/Quicksand-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Lobster";
+    src: url("font/Lobster-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Unbounded";
+    src: url("font/Unbounded-Regular.ttf");
+}
+
+*{
+    font-family: "Quicksand";
+    font-size: 16px;
+}
+
+.title01{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.background{
+    background-image: url("resource/logos/logo2.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.title02{
+    font-family: "Lobster";
+    font-size: 25px;
+    color: rgb(255, 208, 0);
+
+}
+
+.title03{
+    font-family: "Lobster";
+    font-size: 25px;
+    color: rgb(255, 132, 0);
+
+}
+
+.title04{
+    font-family: "Unbounded";
+    font-size: 15px;
+}
+
+.signin-body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.mainImg{
+    height: 680px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.modal-body {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.modal-body iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.product-qty{
+    width: 500px;
+    height: 45px;
+    padding: 10px;
+}
+
+.qty-buttons{
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 30px;
+    border: solid 1px rgb(72,71,71);
+}
+
+.qty-inc,.qty-dec{
+    width: 100%;
+    height: 50%;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.qty-inc{
+    border-top-right-radius: 5px;
+}
+
+.qty-dec{
+    border-bottom-right-radius: 5px;
+}
+
+.defaultWatchlist{
+    height: 400px;
+    background-image: url("resource/default_icons/default_watchlist.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.defaultCart{
+    height: 400px;
+    background-image: url("resource/default_icons/default_cart.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.defaultHistory{
+    height: 400px;
+    background-image: url("resource/default_icons/default_history.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.defaultImg{
+    height: 190px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sadface{
+    height: 300px;
+    background-image: url("resource/sadface.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.search{
+    height: 300px;
+    background-image: url("resource/default_icons/search.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.invoiceHeaderImage{
+    height: 120px;
+    background-image: url("resource/logos/logo2.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.first-place{
+    height: 50px;
+    background-image: url("resource/firstplace.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.selhis:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.reportsBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
